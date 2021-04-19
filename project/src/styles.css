@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+/* reset */
+
+*, *:after, *:before {
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--montserrat);
+  outline: none;
+}
+
+body{
+  width: 100vw - (100vw - 100%);
+}
+
+.active {
+  color: pink;
+}

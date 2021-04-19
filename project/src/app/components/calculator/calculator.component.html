@@ -1,0 +1,38 @@
+<body>
+  <div #ugly id="ugly">
+    <p>Ugly calculator</p>
+
+    <input placeholder="valor 1" [(ngModel)]="x" (input)="quickOperation()">
+    <input placeholder="valor 2" [(ngModel)]="y" (input)="quickOperation()">
+    <input placeholder="operador" [(ngModel)]="operation" (input)="quickOperation()">
+
+
+    <h2>result: {{ result2 }}</h2>
+  </div>
+
+  <div #cool id="cool">
+    <div class="monitorContainer">
+      <h1 class="monitor">{{ result }}</h1>
+      <h1 class="mathTracker">{{ mathTracker }}</h1>
+    </div>
+
+    <div class="buttonContainer">
+      <button (click)="set7()">7</button>
+      <button (click)="set8()">8</button>
+      <button (click)="set9()">9</button>
+      <button class="operators" (click)="setSplit()">÷</button>
+      <button (click)="set4()">4</button>
+      <button (click)="set5()">5</button>
+      <button (click)="set6()">6</button>
+      <button class="operators" (click)="setMultiply()">×</button>
+      <button (click)="set1()">1</button>
+      <button (click)="set2()">2</button>
+      <button (click)="set3()">3</button>
+      <button class="operators" (click)="setMinus()">-</button>
+      <button class="clear" (click)="clear()">C</button>
+      <button (click)="set0()">0</button>
+      <button class="equal" (click)="doTheMath()">=</button>
+      <button class="operators" (click)="setPlus()">+</button>
+    </div>
+  </div>
+</body>
