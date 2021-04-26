@@ -1,8 +1,13 @@
 <body>
   <nav>
-    <a [routerLink]="['home']" [routerLinkActive]="['active']" >Home</a>
-    <a [routerLink]="['calculator']" [routerLinkActive]="['active']">Calculator</a>
-    <a [routerLink]="['evAndRef']" [routerLinkActive]="['active']">Ev n Ref</a>
-    <a [routerLink]="['clinic']" [routerLinkActive]="['active']">Clinic</a>
+    <div class="burguer-box" [ngClass]="{'open': menuOpen}" (click)="openMenu()">
+      <div class="burguer"></div>
+    </div>
+    <ul>
+      <li><a [routerLink]="['home']" [routerLinkActive]="['active']">Home</a></li>
+      <li><a [routerLink]="['calculator']" [routerLinkActive]="['active']">Calculator</a></li>
+      <li><a [routerLink]="['evAndRef']" [routerLinkActive]="['active']">Ev n Ref</a></li>
+      <li><a [routerLink]="['clinic']" [routerLinkActive]="['active']">Clinic</a></li>
+    </ul>
   </nav>
 </body>

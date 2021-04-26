@@ -1,3 +1,69 @@
-nav{
+nav {
+  display: flex;
+  flex-direction: column;
   background: #9C47F5;
+  width: 15%;
+  height: 40vh;
+  padding: 15px;
+}
+
+nav .burguer-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 15%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 500ms ease-in-out;
+}
+
+nav .burguer-box .burguer {
+  position: relative;
+  background: black;
+  border-radius: .3rem;
+  width: 75%;
+  height: 15%;
+  transition: all 500ms ease-in-out;
+}
+
+nav .burguer-box .burguer::before, nav .burguer-box .burguer::after {
+  content: '';
+  position: absolute;
+  background: black;
+  border-radius: .3rem;
+  width: 80%;
+  height: 80%;
+  transition: all 500ms ease-in-out;
+}
+
+nav .burguer-box .burguer::before {
+  left: 10%;
+  top: -130%;
+}
+
+nav .burguer-box .burguer::after {
+  left: 10%;
+  top: 150%;
+}
+
+/* animation */
+
+nav .burguer-box.open .burguer {
+  transform: translateX(-100%);
+  background: transparent !important;
+}
+
+nav .burguer-box.open .burguer::before {
+  left: 100%;
+  top: 0;
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+nav .burguer-box.open .burguer::after {
+  left: 100%;
+  top: 0;
+  transform: rotate(-45deg);
+  width: 100%;
 }
