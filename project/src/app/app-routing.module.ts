@@ -6,11 +6,15 @@ import { EvAndRefComponent } from './components/ev-and-ref/ev-and-ref.component'
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  {path: "", component: HomeComponent},
-  {path: "home", component: HomeComponent},
-  {path: "calculator", component: CalculatorComponent},
-  {path: "evAndRef", component: EvAndRefComponent},
-  {path: "clinic", component: ClinicComponent}
+  {
+    path: "",
+    redirectTo: "/home",
+    pathMatch: 'full'
+  },
+  { path: "home", component: HomeComponent },
+  { path: "calculator", component: CalculatorComponent },
+  { path: "evAndRef", component: EvAndRefComponent },
+  { path: "clinic", component: ClinicComponent }
 ];
 
 @NgModule({
