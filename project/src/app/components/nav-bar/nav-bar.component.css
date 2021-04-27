@@ -9,6 +9,7 @@
 }
 
 nav {
+  border: 1px solid green;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -19,6 +20,7 @@ nav {
 }
 
 /* burguer menu */
+
 nav .burguer-box {
   display: flex;
   justify-content: center;
@@ -39,8 +41,7 @@ nav .burguer-box .burguer {
   transition: all 500ms ease-in-out;
 }
 
-nav .burguer-box .burguer::before,
-nav .burguer-box .burguer::after {
+nav .burguer-box .burguer::before, nav .burguer-box .burguer::after {
   content: "";
   position: absolute;
   background: #6d6d96;
@@ -84,12 +85,13 @@ nav .burguer-box.open .burguer::after {
 }
 
 /* nav links */
+
 nav ul {
-  padding: 0 3rem;
+  padding: 0 0 0 3rem;
   width: 100%;
   height: auto;
   margin-top: 1rem;
-  transform: translateX(-100%);
+  transform: translateX(-110%);
   transition: transform 500ms ease-in-out;
 }
 

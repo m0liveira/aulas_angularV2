@@ -2,13 +2,13 @@
   <div #overlay class="overlay"></div>
 
   <nav>
-    <div #burguer class="burguer-box" (click)="navChoice(burguer, overlay, refUl)">
+    <div #burguer class="burguer-box" (click)="openMenu(burguer, overlay, refUl)">
       <div class="burguer"></div>
     </div>
 
     <ul #refUl>
       <li>
-        <a [routerLink]="['home']" [routerLinkActive]="['active']"  (click)="navChoice(burguer, overlay, refUl)">Home</a>
+        <a [routerLink]="['home']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)">Home</a>
       </li>
 
       <li>
@@ -23,7 +23,7 @@
 
       <li>
         <a [routerLink]="['clinic']" [routerLinkActive]="['active']"
-          (click)="openMenu(burguer, overlay, refUl)">Clinic</a>
+          (click)="navChoice(burguer, overlay, refUl)">Clinic</a>
       </li>
     </ul>
   </nav>
