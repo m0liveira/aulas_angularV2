@@ -1,0 +1,25 @@
+body {
+  background-image: url("/project/src/app/components/home/assets/Homebackground.png");
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+div {
+  border: red 1px solid;
+  width: 98%;
+  height: 98vh;
+}
+
+div img{
+  border: 1px solid green;
+  height: 100%;
+  width: 100%;
+  object-fit: fill;
+}
+
+div+div{
+  border: grey 2px solid;
+}

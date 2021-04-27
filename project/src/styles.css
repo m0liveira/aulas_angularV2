@@ -12,6 +12,7 @@
 
 body{
   width: calc(100vw - (100vw - 100%));
+  height: auto;
 }
 
 .active {

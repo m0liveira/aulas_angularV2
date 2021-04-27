@@ -9,7 +9,6 @@
 }
 
 nav {
-  border: 1px solid green;
   position: fixed;
   display: flex;
   flex-direction: column;
