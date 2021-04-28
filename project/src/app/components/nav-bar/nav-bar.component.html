@@ -1,5 +1,5 @@
 <body>
-  <div #overlay class="overlay"></div>
+  <div #overlay class="overlay" (click)="openMenu(burguer, overlay, refUl)"></div>
 
   <nav>
     <div #burguer class="burguer-box" (click)="openMenu(burguer, overlay, refUl)">

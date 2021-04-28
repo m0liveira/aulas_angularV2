@@ -33,7 +33,7 @@ nav .burguer-box {
 
 nav .burguer-box .burguer {
   position: relative;
-  background: #6d6d96;
+  background: #363650;
   border-radius: 0.3rem;
   width: 75%;
   height: 13%;
@@ -43,7 +43,7 @@ nav .burguer-box .burguer {
 nav .burguer-box .burguer::before, nav .burguer-box .burguer::after {
   content: "";
   position: absolute;
-  background: #6d6d96;
+  background: #232333;
   border-radius: 0.3rem;
   width: 80%;
   height: 80%;
