@@ -10,10 +10,9 @@ export class EvAndRefComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  background: string;
+  bg: string;
 
-  changeColor() {
-    this.background = 'red';
-    this.background = this.background == 'red' ? 'white' : 'red';
+  changeColor(): void {
+    this.bg = this.bg == 'red' ? 'white' : 'red';
   }
 }
