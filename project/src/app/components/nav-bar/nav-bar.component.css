@@ -33,7 +33,7 @@ nav .burguer-box {
 
 nav .burguer-box .burguer {
   position: relative;
-  background: #363650;
+  background: hsl(0, 97%, 55%);
   border-radius: 0.3rem;
   width: 75%;
   height: 13%;
@@ -43,7 +43,7 @@ nav .burguer-box .burguer {
 nav .burguer-box .burguer::before, nav .burguer-box .burguer::after {
   content: "";
   position: absolute;
-  background: #232333;
+  background: hsl(0, 97%, 63%);
   border-radius: 0.3rem;
   width: 80%;
   height: 80%;
@@ -105,12 +105,12 @@ nav ul li a {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  padding-left: 10px;
+  padding-left: .625rem;
   transition: padding-left 250ms ease-in-out;
 }
 
 nav ul li a:active, nav ul li a:hover {
-  color: white;
+  color: hsl(0, 97%, 85%);
   padding-left: 1.25rem;
   transition: padding-left 250ms ease-in-out;
 }
