@@ -1,6 +1,13 @@
+:root {
+  --montserrat: Montserrat, sans-serif;
+  --verdana: Verdana, sans-serif;
+}
+
 /* reset */
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   top: 0;
   left: 0;
   margin: 0;
@@ -10,7 +17,7 @@
   outline: none;
 }
 
-body{
+body {
   width: calc(100vw - (100vw - 100%));
   height: auto;
 }
@@ -21,6 +28,6 @@ body{
   transition: all 200ms ease-in-out;
 }
 
-.hide{
+.hide {
   display: none !important;
 }

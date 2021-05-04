@@ -6,11 +6,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.css'],
 })
 export class NavBarComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   menuOpen: boolean = false;
+
+  closeMenu(burguer: HTMLElement, overlay: HTMLElement, refUl: HTMLElement): void {
+    if (!this.menuOpen) {
+      this.menuOpen = true;
+      burguer.classList.toggle('open');
+      this.openMenu(burguer, overlay, refUl);
+    } else {
+      this.openMenu(burguer, overlay, refUl);
+    }
+  }
 
   // when burguer pressed
   openMenu(burguer: HTMLElement, overlay: HTMLElement, refUl: HTMLElement): void {
