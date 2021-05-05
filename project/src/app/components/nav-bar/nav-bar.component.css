@@ -90,7 +90,7 @@ nav ul {
   width: 100%;
   height: auto;
   margin-top: 1rem;
-  transform: translateX(-110%);
+  transform: translateX(-120%);
   transition: transform 500ms ease-in-out;
 }
 

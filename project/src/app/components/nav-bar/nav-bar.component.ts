@@ -33,7 +33,7 @@ export class NavBarComponent implements OnInit {
     } else {
       burguer.classList.toggle('open');
       overlay.style.background = 'transparent';
-      refUl.style.transform = 'translateX(-110%)';
+      refUl.style.transform = 'translateX(-120%)';
       this.menuOpen = false;
 
       setTimeout(() => {
