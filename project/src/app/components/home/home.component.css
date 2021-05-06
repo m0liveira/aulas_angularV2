@@ -17,11 +17,11 @@ body {
 }
 
 #bg-img2 {
-  background-image: url(https://source.unsplash.com/1600x800/?model);
+  background-image: url(https://source.unsplash.com/1600x800/?models);
 }
 
 #bg-img3 {
-  background-image: url(https://source.unsplash.com/1600x800/?car);
+  background-image: url(https://source.unsplash.com/1600x800/?trueno);
 }
 
 .overlay {
@@ -75,8 +75,8 @@ body {
 .container .img-container .overlay {
   background: linear-gradient(
     0deg,
-    rgba(117, 107, 195, 0.5) 15%,
-    rgba(253, 112, 112, 0.5)
+    rgba(117, 107, 195, 0.35) 15%,
+    rgba(253, 112, 112, 0.35)
   );
 }
 
