@@ -1,1 +1,13 @@
-<p>Clinica da {{phoneService.doctor}}</p>
+<body>
+  <div class="card" *ngFor="let appointment of appointments">
+    <div class="img-container">
+      <img src="{{appointment.photo}}" alt="">
+    </div>
+
+    <h1>Name: <span>{{appointment.name}}</span></h1>
+    <h1>Age: <span>{{appointment.age}}</span></h1>
+    <h1>Doctor: <span>{{appointment.doctor}}</span></h1>
+    <h1>Specialty: <span>{{appointment.specialty}}</span></h1>
+    <h1>Date: <span>{{appointment.date}}</span></h1>
+  </div>
+</body>

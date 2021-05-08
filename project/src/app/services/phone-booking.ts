@@ -5,8 +5,19 @@ import { Injectable } from '@angular/core';
 })
 
 export class PhoneBooking {
-  doctor : string = "Raquel";
+  photo: string;
+  name: string;
+  age: number;
+  doctor: string;
+  specialty: string;
+  date: Date | string;
 
-  constructor() {
-   }
+  constructor(photo: string, name: string, age: number, doctor: string, specialty: string, date: Date | string) {
+    this.photo = photo;
+    this.name = name;
+    this.age = age;
+    this.doctor = doctor;
+    this.specialty = specialty;
+    this.date = date;
+  }
 }
