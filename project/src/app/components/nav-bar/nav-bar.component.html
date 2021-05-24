@@ -10,23 +10,32 @@
 
     <ul #refUl>
       <li>
-        <a [routerLink]="['home']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
+        <a [routerLink]="['Home']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
           (dblclick)="navChoice(burguer, overlay, refUl)">Home</a>
       </li>
 
       <li>
-        <a [routerLink]="['calculator']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
+        <a [routerLink]="['Calculator']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
           (dblclick)="navChoice(burguer, overlay, refUl)">Calculator</a>
       </li>
 
       <li>
-        <a [routerLink]="['evAndRef']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
+        <a [routerLink]="['EvAndRef']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
           (dblclick)="navChoice(burguer, overlay, refUl)">Events + refs</a>
       </li>
 
       <li>
-        <a [routerLink]="['clinic']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
+        <a [routerLink]="['Clinic']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
           (dblclick)="navChoice(burguer, overlay, refUl)">Clinic</a>
+      </li>
+
+      <li>
+        <a [routerLink]="['List']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
+          (dblclick)="navChoice(burguer, overlay, refUl)">List</a>
+      </li>
+      <li>
+        <a [routerLink]="['p-color']" [routerLinkActive]="['active']" (click)="navChoice(burguer, overlay, refUl)"
+          (dblclick)="navChoice(burguer, overlay, refUl)">color</a>
       </li>
     </ul>
   </nav>

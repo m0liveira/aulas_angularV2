@@ -9,6 +9,12 @@ import { CalculatorComponent } from './components/calculator/calculator.componen
 import { FormsModule } from '@angular/forms';
 import { EvAndRefComponent } from './components/ev-and-ref/ev-and-ref.component';
 import { ClinicComponent } from './components/clinic/clinic.component';
+import { FourOfourComponent } from './components/four-ofour/four-ofour.component';
+import { ListaComprasComponent } from './components/listaCompras/lista-compras/lista-compras.component';
+import { AddComponent } from './components/listaCompras/add/add.component';
+import { BuyComponent } from './components/listaCompras/buy/buy.component';
+import { PColorComponent } from './components/p-color/p-color.component';
+import { SColorComponent } from './components/p-color/s-color/s-color.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +23,13 @@ import { ClinicComponent } from './components/clinic/clinic.component';
     NavBarComponent,
     CalculatorComponent,
     EvAndRefComponent,
-    ClinicComponent
+    ClinicComponent,
+    FourOfourComponent,
+    ListaComprasComponent,
+    AddComponent,
+    BuyComponent,
+    PColorComponent,
+    SColorComponent
   ],
   imports: [
     BrowserModule,
