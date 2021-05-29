@@ -1,11 +1,14 @@
 :root {
   --montserrat: Montserrat, sans-serif;
   --verdana: Verdana, sans-serif;
+  --acme: 'Acme', sans-serif;
 }
 
 /* reset */
 
-*, *:after, *:before {
+*,
+*:after,
+*:before {
   top: 0;
   left: 0;
   margin: 0;
