@@ -1,15 +1,23 @@
 <body>
   <!-- <input [style.background]='bg' (mouseenter)="changeColor()" (mouseleave)="changeColor()" (click)="changeColor()"> -->
 
-  <div #box class="box">
+  <div #box class="box hide">
     <h1>Choose your side</h1>
-    <div class="img-container" (click)="republicJedi(box)">
+    <div class="img-container" (click)="republicJedi(box, box2)">
       <img src="../../../assets/media/republic.png" alt="repubilc jedi">
     </div>
-    <div class="img-container" (click)="sithJedi(box)">
+    <div class="img-container" (click)="sithJedi(box, box2)">
       <img src="../../../assets/media/sith.png" alt="sith jedi">
     </div>
   </div>
 
-  
+  <div #box2 class="box">
+    <div #lightsaber class="lightsaber">
+      <input (click)="switcher()" type="checkbox" id="light">
+      <div class="blade"></div>
+      <label for="light" class="hilt"></label>
+    </div>
+
+    <button (click)="defend(lightsaber)">Defende</button>
+  </div>
 </body>

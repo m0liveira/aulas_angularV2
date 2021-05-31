@@ -12,6 +12,24 @@ export class EvAndRefComponent implements OnInit {
 
   bg: string;
   sith: boolean;
+  onOff: boolean = false;
+
+  // play sound when lightsaber turns on
+  switcher(): void {
+    if (!this.onOff) {
+      let audio = new Audio('https://assets.codepen.io/308367/coolsaber.mp3');
+      audio.volume = 0.2;
+      audio.play();
+      this.onOff = true;
+    } else {
+      this.onOff = false;
+    }
+  }
+
+  // defend animation
+  defend(lightsaber: HTMLElement): void {
+    lightsaber.classList.toggle("defend");
+  }
 
   changeColor(): void {
     this.bg = this.bg == 'red' ? 'white' : 'red';
@@ -19,18 +37,19 @@ export class EvAndRefComponent implements OnInit {
     console.log("mudou");
   }
 
-  hideChooser(box: HTMLElement): void {
-    box.style.display = "none";
+  hideToggle(box: HTMLElement, box2: HTMLElement): void {
+    box.classList.toggle("hide");
+    box2.classList.toggle("hide");
     console.log(this.sith);
   }
 
-  republicJedi(box: HTMLElement): void {
+  republicJedi(box: HTMLElement, box2: HTMLElement): void {
     this.sith = false;
-    this.hideChooser(box);
+    this.hideToggle(box, box2);
   }
 
-  sithJedi(box: HTMLElement): void {
+  sithJedi(box: HTMLElement, box2: HTMLElement): void {
     this.sith = true;
-    this.hideChooser(box);
+    this.hideToggle(box, box2);
   }
 }
