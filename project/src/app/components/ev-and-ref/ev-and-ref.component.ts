@@ -14,22 +14,40 @@ export class EvAndRefComponent implements OnInit {
   sith: boolean;
   onOff: boolean = false;
 
+  //#region sound area
   // play sound when lightsaber turns on
   switcher(): void {
+    let audio3
     if (!this.onOff) {
       let audio = new Audio('https://assets.codepen.io/308367/coolsaber.mp3');
       audio.volume = 0.2;
       audio.play();
+
       this.onOff = true;
     } else {
       this.onOff = false;
+      let audio2 = new Audio('../../assets/audio/Close.mp4');
+      audio2.volume = 0.2;
+      audio2.play();
+    }
+  }
+  //#endregion
+
+  //#region lightsaber animations
+  // defend animation
+  defend(lightsaber: HTMLElement, blade: HTMLElement, checkbox: HTMLInputElement): void {
+    if (!this.onOff) {
+      checkbox.checked = true;
+      this.switcher();
+      this.onOff = true;
+
+      lightsaber.classList.toggle("defend");
+    } else {
+      lightsaber.classList.toggle("defend");
     }
   }
 
-  // defend animation
-  defend(lightsaber: HTMLElement): void {
-    lightsaber.classList.toggle("defend");
-  }
+  //#endregion
 
   changeColor(): void {
     this.bg = this.bg == 'red' ? 'white' : 'red';

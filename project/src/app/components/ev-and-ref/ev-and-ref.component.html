@@ -13,13 +13,13 @@
 
   <div #box2 class="box">
     <div #lightsaber class="lightsaber">
-      <input (click)="switcher()" type="checkbox" id="light">
-      <div class="blade"></div>
+      <input #checkbox (click)="switcher()" type="checkbox" id="light">
+      <div #blade class="blade"></div>
       <label for="light" class="hilt"></label>
     </div>
 
     <div class="container">
-      <button (click)="defend(lightsaber)" class="defend">Defende</button>
+      <button (click)="defend(lightsaber, blade, checkbox)" class="def">Defende</button>
       <button class="fullRgb"></button>
       <input type="text" required>
       <button></button>
