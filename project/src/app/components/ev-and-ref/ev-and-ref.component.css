@@ -24,6 +24,7 @@ body {
 }
 
 .box:nth-last-of-type(1) {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -89,11 +90,6 @@ body {
   cursor: pointer;
 }
 
-.container{
-  width: 100%;
-  height: 15%;
-}
-
 /* lightsaber */
 
 /* lightsaber box */
@@ -147,12 +143,13 @@ body {
   top: -250%;
   background: white;
   border-radius: 100vw 100vw 0 0;
-  box-shadow: inset 0 0 4px hsl(0, 100%, 50%), 0 0 1rem hsla(0, 100%, 50%, 0.8),
-    0 0 1.5rem hsla(0, 100%, 50%, 0.7), 0 0 2rem hsla(0, 100%, 50%, 0.5),
-    0 0 3rem hsla(0, 100%, 50%, 0.3), 0 0 5rem hsla(0, 100%, 50%, 0.2);
+  box-shadow: inset 0 0 0.25rem hsl(0, 100%, 50%),
+    0 0 1rem hsla(0, 100%, 50%, 0.8), 0 0 1.5rem hsla(0, 100%, 50%, 0.7),
+    0 0 2rem hsla(0, 100%, 50%, 0.5), 0 0 3rem hsla(0, 100%, 50%, 0.3),
+    0 0 5rem hsla(0, 100%, 50%, 0.2);
   height: 250%;
   width: 100%;
-  transition: transform 150ms ease-out;
+  transition: transform 150ms ease-out, animation 350ms ease-in-out;
   transform-origin: bottom;
 }
 
@@ -234,5 +231,186 @@ body {
   }
   to {
     transform: rotate(0) translate(0, 0);
+  }
+}
+
+/* container and buttons */
+
+.container {
+  position: absolute;
+  top: auto;
+  bottom: 1%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  width: 100%;
+  height: 15%;
+}
+
+.container div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 33%;
+  height: 33%;
+}
+
+.container button {
+  color: #006eff;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  font-family: var(--acme);
+  font-size: 1vw;
+  font-weight: 500;
+  width: 10%;
+  height: 33%;
+  cursor: pointer;
+}
+
+.container button:nth-of-type(1) {
+  background: transparent;
+  border: 2px solid #006eff;
+}
+
+.container button:nth-of-type(2) {
+  position: relative;
+  background: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+  background-size: 1800% 1800%;
+  animation: rainbow 5s ease infinite;
+}
+
+.container button:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  background: #222;
+  border-radius: 0.3rem;
+  width: 96%;
+  height: 90%;
+}
+
+.container button:nth-of-type(2)::after {
+  content: "Tune it up";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: -webkit-linear-gradient(
+    124deg,
+    #dd00f3,
+    #dd00f3,
+    #2b1de8,
+    #1ddde8,
+    #1de840,
+    #e3e81d,
+    #e8b71d,
+    #e81d1d,
+    #ff2400
+  );
+  background-size: 1800% 1800%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: var(--acme);
+  font-size: 1vw;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  animation: rainbow 5s ease infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+.container div button {
+  background: transparent;
+  color: #ff0000;
+  border: 2px solid #ff0000;
+  width: 35%;
+  height: 100%;
+}
+
+.container div input {
+  background: transparent;
+  color: #ff0000;
+  border: 2px solid rgb(190, 190, 190);
+  padding: 0 2%;
+  width: 45%;
+  height: 80%;
+}
+
+.tuneIt {
+  -webkit-animation: rainbow2 5s infinite ease;
+  animation: rainbow2 5s infinite ease;
+  transition: all 350ms ease-in-out;
+}
+
+@keyframes rainbow2 {
+  from,
+  to {
+    box-shadow: inset 0 0 0.25rem hsl(0, 100%, 50%),
+      0 0 1rem hsla(0, 100%, 50%, 0.8), 0 0 1.5rem hsla(0, 100%, 50%, 0.7),
+      0 0 2rem hsla(0, 100%, 50%, 0.5), 0 0 3rem hsla(0, 100%, 50%, 0.3),
+      0 0 5rem hsla(0, 100%, 50%, 0.2);
+  }
+  16% {
+    box-shadow: inset 0 0 0.25rem hsl(46, 82%, 51%),
+      0 0 1rem hsla(46, 82%, 51%, 0.8), 0 0 1.5rem hsla(46, 82%, 51%, 0.7),
+      0 0 2rem hsla(46, 82%, 51%, 0.5), 0 0 3rem hsla(46, 82%, 51%, 0.3),
+      0 0 5rem hsla(46, 82%, 51%, 0.2);
+  }
+  32% {
+    box-shadow: inset 0 0 0.25rem hsl(61, 82%, 51%),
+      0 0 1rem hsla(61, 82%, 51%, 0.8), 0 0 1.5rem hsla(61, 82%, 51%, 0.7),
+      0 0 2rem hsla(61, 82%, 51%, 0.5), 0 0 3rem hsla(61, 82%, 51%, 0.3),
+      0 0 5rem hsla(61, 82%, 51%, 0.2);
+  }
+  48% {
+    box-shadow: inset 0 0 0.25rem hsl(130, 82%, 51%),
+      0 0 1rem hsla(130, 82%, 51%, 0.8), 0 0 1.5rem hsla(130, 82%, 51%, 0.7),
+      0 0 2rem hsla(130, 82%, 51%, 0.5), 0 0 3rem hsla(130, 82%, 51%, 0.3),
+      0 0 5rem hsla(130, 82%, 51%, 0.2);
+  }
+  64% {
+    box-shadow: inset 0 0 0.25rem hsl(183, 82%, 51%),
+      0 0 1rem hsla(183, 82%, 51%, 0.8), 0 0 1.5rem hsla(183, 82%, 51%, 0.7),
+      0 0 2rem hsla(183, 82%, 51%, 0.5), 0 0 3rem hsla(183, 82%, 51%, 0.3),
+      0 0 5rem hsla(183, 82%, 51%, 0.2);
+  }
+  80% {
+    box-shadow: inset 0 0 0.25rem hsl(244, 82%, 51%) 0 0 1rem
+        hsla(244, 82%, 51%, 0.8),
+      0 0 1.5rem hsla(244, 82%, 51%, 0.7), 0 0 2rem hsla(244, 82%, 51%, 0.5),
+      0 0 3rem hsla(244, 82%, 51%, 0.3), 0 0 5rem hsla(244, 82%, 51%, 0.2);
+  }
+  90% {
+    box-shadow: inset 0 0 0.25rem hsl(295, 100%, 48%),
+      0 0 1rem hsla(295, 100%, 48%, 0.8), 0 0 1.5rem hsla(295, 100%, 48%, 0.7),
+      0 0 2rem hsla(295, 100%, 48%, 0.5), 0 0 3rem hsla(295, 100%, 48%, 0.3),
+      0 0 5rem hsla(295, 100%, 48%, 0.2);
   }
 }

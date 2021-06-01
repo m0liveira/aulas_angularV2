@@ -14,15 +14,17 @@
   <div #box2 class="box">
     <div #lightsaber class="lightsaber">
       <input #checkbox (click)="switcher()" type="checkbox" id="light">
-      <div #blade class="blade"></div>
+      <div #blade [style.boxShadow]='bs' class="blade"></div>
       <label for="light" class="hilt"></label>
     </div>
 
     <div class="container">
       <button (click)="defend(lightsaber, blade, checkbox)" class="def">Defende</button>
-      <button class="fullRgb"></button>
-      <input type="text" required>
-      <button></button>
+      <button (click)="tuneMe(blade, checkbox)" class="fullRgb">Tune it up</button>
+      <div>
+        <input #inputColor type="text" placeholder="Type a color (hex, hsl, rgb...)">
+        <button (click)="changeColor(inputColor, blade)">Change color</button>
+      </div>
     </div>
   </div>
 </body>

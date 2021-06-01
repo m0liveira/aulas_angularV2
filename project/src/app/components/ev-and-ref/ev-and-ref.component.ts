@@ -10,7 +10,7 @@ export class EvAndRefComponent implements OnInit {
 
   ngOnInit(): void { }
 
-  bg: string;
+  bs: string;
   sith: boolean;
   onOff: boolean = false;
 
@@ -47,13 +47,33 @@ export class EvAndRefComponent implements OnInit {
     }
   }
 
+  tuneMe(blade: HTMLElement, checkbox: HTMLInputElement) {
+    if (!this.onOff) {
+      checkbox.checked = true;
+      this.switcher();
+      this.onOff = true;
+
+      blade.classList.toggle("tuneIt");
+    } else if (this.onOff) {
+      checkbox.checked = false;
+      this.switcher();
+      blade.classList.toggle("tuneIt");
+      setTimeout(() => {
+        checkbox.checked = true;
+        this.switcher();
+      }, 750);
+    }
+  }
+
   //#endregion
 
-  changeColor(): void {
-    this.bg = this.bg == 'red' ? 'white' : 'red';
-    this.bg = 'red';
-    console.log("mudou");
+  changeColor(inputColor: HTMLInputElement, blade: HTMLElement): void {
+    this.bs = inputColor.value;
+    blade.style.boxShadow =  this.bs;
+
+    console.log(this.bs + " -- " + inputColor.value);
   }
+
 
   hideToggle(box: HTMLElement, box2: HTMLElement): void {
     box.classList.toggle("hide");
