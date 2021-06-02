@@ -14,16 +14,22 @@ export class CoockiesComponent implements OnInit {
   }
 
   cookies: boolean;
+  closed: boolean = false;
 
   // save cookies
   saveOnCookies(): any {
-    // localStorage.setItem('cookies', 'accepted');
+    localStorage.setItem('cookies', 'accepted');
+    this.cookies = true;
 
-    // this.cookies = true;
+    
   }
 
   // get cookies
   getCookies(): any {
-    // this.cookies = localStorage.getItem('cookies') == 'accepted' ? true : false;
+    this.cookies = localStorage.getItem('cookies') == 'accepted' ? true : false;
+  }
+
+  close() {
+    this.closed = true;
   }
 }
