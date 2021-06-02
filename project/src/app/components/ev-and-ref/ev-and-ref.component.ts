@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ev-and-ref.component.css'],
 })
 export class EvAndRefComponent implements OnInit {
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   bs: string;
   sith: boolean;
@@ -17,7 +17,7 @@ export class EvAndRefComponent implements OnInit {
   //#region sound area
   // play sound when lightsaber turns on
   switcher(): void {
-    let audio3
+    let audio3;
     if (!this.onOff) {
       let audio = new Audio('https://assets.codepen.io/308367/coolsaber.mp3');
       audio.volume = 0.2;
@@ -35,15 +35,19 @@ export class EvAndRefComponent implements OnInit {
 
   //#region lightsaber animations
   // defend animation
-  defend(lightsaber: HTMLElement, blade: HTMLElement, checkbox: HTMLInputElement): void {
+  defend(
+    lightsaber: HTMLElement,
+    blade: HTMLElement,
+    checkbox: HTMLInputElement
+  ): void {
     if (!this.onOff) {
       checkbox.checked = true;
       this.switcher();
       this.onOff = true;
 
-      lightsaber.classList.toggle("defend");
+      lightsaber.classList.toggle('defend');
     } else {
-      lightsaber.classList.toggle("defend");
+      lightsaber.classList.toggle('defend');
     }
   }
 
@@ -53,11 +57,11 @@ export class EvAndRefComponent implements OnInit {
       this.switcher();
       this.onOff = true;
 
-      blade.classList.toggle("tuneIt");
+      blade.classList.toggle('tuneIt');
     } else if (this.onOff) {
       checkbox.checked = false;
       this.switcher();
-      blade.classList.toggle("tuneIt");
+      blade.classList.toggle('tuneIt');
       setTimeout(() => {
         checkbox.checked = true;
         this.switcher();
@@ -69,15 +73,27 @@ export class EvAndRefComponent implements OnInit {
 
   changeColor(inputColor: HTMLInputElement, blade: HTMLElement): void {
     this.bs = inputColor.value;
-    blade.style.boxShadow =  this.bs;
+    blade.style.boxShadow =
+      'inset 0 0 0.25rem hsl(' +
+      this.bs +
+      '), 0 0 1rem hsla(' +
+      this.bs +
+      ', 0.8), 0 0 1.5rem hsla(' +
+      this.bs +
+      ', 0.7),  0 0 2rem hsla(' +
+      this.bs +
+      ', 0.5), 0 0 3rem hsla(' +
+      this.bs +
+      ', 0.3),  0 0 5rem hsla(' +
+      this.bs +
+      '%, 0.2); ';
 
-    console.log(this.bs + " -- " + inputColor.value);
+      console.log(this.bs);
   }
 
-
   hideToggle(box: HTMLElement, box2: HTMLElement): void {
-    box.classList.toggle("hide");
-    box2.classList.toggle("hide");
+    box.classList.toggle('hide');
+    box2.classList.toggle('hide');
     console.log(this.sith);
   }
 

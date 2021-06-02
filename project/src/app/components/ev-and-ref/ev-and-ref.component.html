@@ -14,7 +14,7 @@
   <div #box2 class="box">
     <div #lightsaber class="lightsaber">
       <input #checkbox (click)="switcher()" type="checkbox" id="light">
-      <div #blade [style.boxShadow]='bs' class="blade"></div>
+      <div #blade class="blade"></div>
       <label for="light" class="hilt"></label>
     </div>
 
@@ -22,7 +22,7 @@
       <button (click)="defend(lightsaber, blade, checkbox)" class="def">Defende</button>
       <button (click)="tuneMe(blade, checkbox)" class="fullRgb">Tune it up</button>
       <div>
-        <input #inputColor type="text" placeholder="Type a color (hex, hsl, rgb...)">
+        <input #inputColor type="text" placeholder="Type a color hsl only">
         <button (click)="changeColor(inputColor, blade)">Change color</button>
       </div>
     </div>
