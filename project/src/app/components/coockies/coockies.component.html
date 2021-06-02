@@ -1,0 +1,6 @@
+<body>
+  <div [ngClass]="{'show': !cookies, 'hide': cookies}">
+    <h1>This website employs cookies to improve your user experience!</h1>
+    <button (click)="saveOnCookies()">Allow cookies</button>
+  </div>
+</body>

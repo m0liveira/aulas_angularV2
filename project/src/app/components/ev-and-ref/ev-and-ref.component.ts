@@ -86,9 +86,7 @@ export class EvAndRefComponent implements OnInit {
       this.bs +
       ', 0.3),  0 0 5rem hsla(' +
       this.bs +
-      '%, 0.2); ';
-
-    console.log(this.bs);
+      ', 0.2)';
   }
 
   hideToggle(box: HTMLElement, box2: HTMLElement): void {

@@ -15,6 +15,7 @@ import { AddComponent } from './components/listaCompras/add/add.component';
 import { BuyComponent } from './components/listaCompras/buy/buy.component';
 import { PColorComponent } from './components/p-color/p-color.component';
 import { SColorComponent } from './components/p-color/s-color/s-color.component';
+import { CoockiesComponent } from './components/coockies/coockies.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SColorComponent } from './components/p-color/s-color/s-color.component'
     AddComponent,
     BuyComponent,
     PColorComponent,
-    SColorComponent
+    SColorComponent,
+    CoockiesComponent
   ],
   imports: [
     BrowserModule,
