@@ -104,4 +104,11 @@ export class EvAndRefComponent implements OnInit {
     this.sith = true;
     this.hideToggle(box, box2);
   }
+
+  goodJedi(blade: HTMLElement) {
+    if (!this.sith) {
+      blade.style.boxShadow =
+        'inset 0 0 0.25rem hsl(214, 100%, 50%), 0 0 1rem hsla(214, 100%, 50%, 0.8), 0 0 1.5rem hsla(214, 100%, 50%, 0.7),  0 0 2rem hsla(214, 100%, 50%, 0.5), 0 0 3rem hsla(214, 100%, 50%, 0.3),  0 0 5rem hsla(214, 100%, 50%, 0.2)';
+    }
+  }
 }
