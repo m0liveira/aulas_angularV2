@@ -9,7 +9,7 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(https://source.unsplash.com/1600x800/?city);
+  background-image: url(https://source.unsplash.com/1600x800/?universe);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,11 +17,19 @@ body {
 }
 
 #bg-img2 {
-  background-image: url(https://source.unsplash.com/1600x800/?models);
+  background-image: url(https://source.unsplash.com/1600x800/?universe_planet);
 }
 
 #bg-img3 {
-  background-image: url(https://source.unsplash.com/1600x800/?trueno);
+  background-image: url(https://source.unsplash.com/1600x800/?tokyo-city);
+}
+
+#bg-img4 {
+  background-image: url(https://source.unsplash.com/1600x800/?trueno_car);
+}
+
+#bg-img5 {
+  background-image: url(https://source.unsplash.com/1600x800/?japanese-woman);
 }
 
 .overlay {
@@ -42,10 +50,8 @@ body {
   top: 30%;
   left: 30%;
   color: white;
-  text-shadow:
-  1px 1px 0 rgba(0, 0, 0, 0.8),
-  3px 3px 0 rgba(0, 0, 0, 0.5),
-  5px 5px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8), 3px 3px 0 rgba(0, 0, 0, 0.5),
+    5px 5px 0 rgba(0, 0, 0, 0.2);
   font-size: 8vw;
   font-weight: 800;
   text-transform: uppercase;

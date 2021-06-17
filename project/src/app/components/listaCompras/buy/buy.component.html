@@ -1,8 +1,6 @@
 <body>
   <div *ngFor="let item of listService.listaCompras">
-    <div>
       <p [ngClass]="{'comprados' : item.cart}">{{item.name}}</p>
       <button (click)="Comprar(item)">COMPRAR</button>
-    </div>
   </div>
 </body>
